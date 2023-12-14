@@ -14,7 +14,8 @@ label {
 }
 
 .illustration {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
@@ -25,9 +26,29 @@ body {
   font-family: "Libre Franklin", sans-serif;
   min-height: 100vh;
 }
+@media (min-width: 600px) {
+  body .wrapper {
+    max-width: 40rem;
+  }
+  body .input-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 64px;
+  }
+  body .input-content form input {
+    margin: 0;
+  }
+  body .input-content button {
+    margin: 0;
+    margin-left: 12px;
+    width: 12rem;
+  }
+}
 
 .wrapper {
-  max-width: 30rem;
+  max-width: 34rem;
 }
 
 .top-content {
@@ -40,17 +61,21 @@ body {
 .top-content .logo {
   padding: 4rem;
   margin-top: 10px;
+  text-align: center;
 }
 .top-content h1 {
   font-weight: 400;
+  text-align: center;
   color: rgba(0, 0, 0, 0.459);
   margin-bottom: 24px;
 }
 .top-content span {
+  text-align: center;
   color: black;
   font-weight: 800;
 }
 .top-content p {
+  text-align: center;
   margin-bottom: 24px;
 }
 
@@ -59,14 +84,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0;
 }
-.input-content input {
+.input-content form input {
   border: 1px solid hsl(223, 100%, 88%);
   border-radius: 24px;
   margin-bottom: 10px;
-  width: 80%;
   padding: 1rem;
+  width: 20rem;
 }
 .input-content button {
   background-color: hsl(223, 87%, 63%);
@@ -74,7 +98,7 @@ body {
   font-size: 1rem;
   border: none;
   border-radius: 24px;
-  width: 85%;
+  width: 20rem;
   margin-bottom: 32px;
   padding: 1rem;
 }
@@ -82,12 +106,19 @@ body {
 footer {
   text-align: center;
 }
+footer .social-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
 footer .Copyright {
   margin: 24px;
+  opacity: 0.4;
 }
 footer .attribution {
   font-size: 0.875rem;
-  text-align: center;
 }
 footer .attribution a {
   color: hsl(228, 31%, 50%);

@@ -30,7 +30,8 @@ label {
 }
 
 .illustration {
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
 
 }
 
@@ -39,33 +40,64 @@ body {
     font-family: 'Libre Franklin', sans-serif;
     min-height: 100vh;
 
+    @media (min-width: 600px) {
+        .wrapper {
+            max-width: 40rem;
+        }
+
+        .input-content {
+            @include Flex(row);
+            margin-bottom: 64px;
+
+            form {
+
+                input {
+                    margin: 0;
+                }
+
+            }
+
+            button {
+                margin: 0;
+                margin-left: 12px;
+                width: 12rem;
+            }
+        }
+    }
+
 }
 
 .wrapper {
-    max-width: 30rem;
+    max-width: 34rem;
 }
 
 .top-content {
     @include Flex(column);
     margin: 0;
 
+
     .logo {
         padding: 4rem;
         margin-top: 10px;
+        text-align: center;
     }
 
     h1 {
         font-weight: 400;
+        text-align: center;
         color: rgba(0, 0, 0, 0.459);
         margin-bottom: 24px;
     }
 
     span {
+        text-align: center;
         color: black;
         font-weight: 800;
     }
 
     p {
+        text-align: center;
+        
         margin-bottom: 24px;
     }
 }
@@ -73,24 +105,28 @@ body {
 .input-content {
     @include Flex(column);
 
-    margin: 0;
+    form {
 
-    input {
-        border: 1px solid hsl(223, 100%, 88%);
-        border-radius: 24px;
-        margin-bottom: 10px;
-        width: 80%;
-        padding: 1rem;
+
+        input {
+            border: 1px solid hsl(223, 100%, 88%);
+            border-radius: 24px;
+            margin-bottom: 10px;
+            padding: 1rem;
+            width: 20rem
+        }
+
     }
 
 
     button {
+
         background-color: hsl(223, 87%, 63%);
         color: white;
         font-size: 1rem;
         border: none;
         border-radius: 24px;
-        width: 85%;
+        width: 20rem;
         margin-bottom: 32px;
         padding: 1rem;
     }
@@ -98,15 +134,20 @@ body {
 
 footer {
     text-align: center;
-    
+
+    .social-logos {
+        @include Flex(row);
+        justify-content: space-evenly;
+    }
 
     .Copyright {
         margin: 24px;
+        opacity: 0.4;
     }
 
     .attribution {
         font-size: 0.875rem;
-        text-align: center;
+
     }
 
     .attribution a {
