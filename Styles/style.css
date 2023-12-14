@@ -1,0 +1,94 @@
+h1,
+h2,
+h3,
+p,
+img,
+button,
+input,
+label {
+  margin: 0;
+}
+
+*::before *::after {
+  box-sizing: border-box;
+}
+
+.illustration {
+  max-width: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  justify-items: center;
+  font-family: "Libre Franklin", sans-serif;
+  min-height: 100vh;
+}
+
+.wrapper {
+  max-width: 30rem;
+}
+
+.top-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.top-content .logo {
+  padding: 4rem;
+  margin-top: 10px;
+}
+.top-content h1 {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.459);
+  margin-bottom: 24px;
+}
+.top-content span {
+  color: black;
+  font-weight: 800;
+}
+.top-content p {
+  margin-bottom: 24px;
+}
+
+.input-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.input-content input {
+  border: 1px solid hsl(223, 100%, 88%);
+  border-radius: 24px;
+  margin-bottom: 10px;
+  width: 80%;
+  padding: 1rem;
+}
+.input-content button {
+  background-color: hsl(223, 87%, 63%);
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 24px;
+  width: 85%;
+  margin-bottom: 32px;
+  padding: 1rem;
+}
+
+footer {
+  text-align: center;
+}
+footer .Copyright {
+  margin: 24px;
+}
+footer .attribution {
+  font-size: 0.875rem;
+  text-align: center;
+}
+footer .attribution a {
+  color: hsl(228, 31%, 50%);
+}/*# sourceMappingURL=style.css.map */
