@@ -46,10 +46,14 @@ body {
     margin-bottom: 64px;
   }
   body .input-content form input {
-    margin: 0;
+    margin-bottom: -5px;
+  }
+  body .input-content form #msg {
+    padding-top: 10px;
+    padding-bottom: 0;
   }
   body .input-content button {
-    margin: 0;
+    margin-bottom: 0;
     margin-left: 12px;
     width: 12rem;
   }
@@ -98,8 +102,17 @@ body {
   border: 1px solid hsl(223, 100%, 88%);
   border-radius: 24px;
   margin-bottom: 10px;
-  padding: 1rem;
+  padding: 16px;
   width: 24rem;
+}
+.input-content form .redBox {
+  border: 1px solid hsl(354, 100%, 66%);
+}
+.input-content form #msg {
+  color: red;
+  font-size: 0.75rem;
+  padding-left: 16px;
+  padding-bottom: 8px;
 }
 .input-content button {
   background-color: hsl(223, 87%, 63%);
@@ -109,7 +122,7 @@ body {
   border-radius: 24px;
   width: 24rem;
   margin-bottom: 32px;
-  padding: 1rem;
+  padding: 16px;
   box-shadow: 2px 2px 4px hsla(210, 52%, 59%, 0.8);
 }
 .input-content button:hover {

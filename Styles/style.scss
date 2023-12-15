@@ -62,13 +62,18 @@ body {
             form {
 
                 input {
-                    margin: 0;
+                    margin-bottom: -5px;
+                }
+                
+                #msg{
+                    padding-top: 10px;
+                    padding-bottom: 0;
                 }
 
             }
 
             button {
-                margin: 0;
+                margin-bottom: 0;
                 margin-left: 12px;
                 width: 12rem;
             }
@@ -118,15 +123,24 @@ body {
     
 
     form {
-
-
         input {
-      
             border: 1px solid hsl(223, 100%, 88%);
             border-radius: 24px;
             margin-bottom: 10px;
-            padding: 1rem;
+            padding: 16px;
             width: 24rem;
+        }
+
+        .redBox{
+            border: 1px solid hsl(354, 100%, 66%);
+        }
+
+        //Dynamic HTML text with JavaScript
+        #msg{
+            color: red;
+            font-size: 0.75rem;
+            padding-left: 16px;
+            padding-bottom: 8px;
         }
 
     }
@@ -141,7 +155,7 @@ body {
         border-radius: 24px;
         width: 24rem;
         margin-bottom: 32px;
-        padding: 1rem;
+        padding: 16px;
         box-shadow: 2px 2px 4px hsla(210, 52%, 59%, 0.8)
     }
 
