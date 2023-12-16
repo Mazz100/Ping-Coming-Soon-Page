@@ -56,28 +56,41 @@ body {
         }
 
         .input-content {
-            @include Flex(row);
             margin-bottom: 64px;
 
             form {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
 
                 input {
+                    grid-area: 1/1/1/1;
+
                     margin-bottom: -5px;
                 }
-                
-                #msg{
-                    padding-top: 10px;
+
+                button {
+                    grid-area: 1/2/1/2;
+                    margin-bottom: 0;
+                    margin-left: 16px;
+                    width: 12rem;
+                }
+
+                .errormsg {
+                    grid-area: 2/1/2/1;
                     padding-bottom: 0;
                 }
 
-            }
+                .validmsg{
+                    grid-area: 2/1/2/1;
+                    padding-bottom: 0;
+                }
 
-            button {
-                margin-bottom: 0;
-                margin-left: 12px;
-                width: 12rem;
+
             }
         }
+
+
     }
 
 }
@@ -119,10 +132,10 @@ body {
 }
 
 .input-content {
-    @include Flex(column);
-    
 
     form {
+        @include Flex(column);
+
         input {
             border: 1px solid hsl(223, 100%, 88%);
             border-radius: 24px;
@@ -131,52 +144,62 @@ body {
             width: 24rem;
         }
 
-        .redBox{
+        .redBox {
             border: 1px solid hsl(354, 100%, 66%);
         }
 
+
         //Dynamic HTML text with JavaScript
-        #msg{
+        .errormsg {
             color: red;
             font-size: 0.75rem;
             padding-left: 16px;
             padding-bottom: 8px;
         }
 
+        .validmsg{
+            color: green;
+            font-size: 0.75rem;
+            padding-left: 16px;
+            padding-bottom: 8px;
+        }
+
+        button {
+
+            background-color: hsl(223, 87%, 63%);
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 24px;
+            width: 24rem;
+            margin-bottom: 32px;
+            padding: 16px;
+            box-shadow: 2px 2px 4px hsla(210, 52%, 59%, 0.8)
+        }
+
+        //Active states
+        button:hover {
+            cursor: pointer;
+            background-color: hsl(223, 100%, 75%);
+
+            transform: scale(1.1);
+            animation-name: hoverZoom;
+            animation-duration: 0.2s;
+
+        }
+
     }
 
 
-    button {
 
-        background-color: hsl(223, 87%, 63%);
-        color: white;
-        font-size: 1rem;
-        border: none;
-        border-radius: 24px;
-        width: 24rem;
-        margin-bottom: 32px;
-        padding: 16px;
-        box-shadow: 2px 2px 4px hsla(210, 52%, 59%, 0.8)
-    }
-
-    //Active states
-    button:hover {
-        cursor: pointer;
-        background-color: hsl(223, 100%, 75%);
-
-        transform: scale(1.1);
-        animation-name: hoverZoom;
-        animation-duration: 0.2s;
-
-    }
 
 
 }
 
 footer {
     text-align: center;
-   
-    
+
+
 
     .social-logos {
         @include Flex(row);
