@@ -34,7 +34,7 @@ body {
   font-family: "Libre Franklin", sans-serif;
   min-height: 100vh;
 }
-@media (min-width: 600px) {
+@media (min-width: 37.5rem) {
   body .wrapper {
     max-width: 40rem;
   }
@@ -67,7 +67,7 @@ body {
 }
 
 .wrapper {
-  max-width: 30rem;
+  max-width: 26rem;
 }
 
 .top-content {
@@ -84,7 +84,7 @@ body {
 }
 .top-content h1 {
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: center;
   color: rgba(0, 0, 0, 0.459);
   margin-bottom: 24px;
@@ -96,7 +96,7 @@ body {
 }
 .top-content p {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .input-content form {
@@ -115,12 +115,12 @@ body {
 .input-content form .errormsg {
   color: red;
   font-size: 0.75rem;
-  padding-bottom: 8px;
+  padding-bottom: 10px;
 }
 .input-content form .validmsg {
   color: green;
   font-size: 0.75rem;
-  padding-bottom: 8px;
+  padding-bottom: 10px;
 }
 .input-content form button {
   background-color: hsl(223, 87%, 63%);
