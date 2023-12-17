@@ -29,15 +29,6 @@ label {
     justify-items: center;
 }
 
-@keyframes hoverZoom {
-    0% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(1.1);
-    }
-}
 
 .illustration {
     width: 100%;
@@ -50,52 +41,10 @@ body {
     font-family: 'Libre Franklin', sans-serif;
     min-height: 100vh;
 
-    @media (min-width: 37.5rem) {
-        .wrapper {
-            max-width: 40rem;
-        }
-
-        .input-content {
-            margin-bottom: 64px;
-
-            form {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(2, 1fr);
-
-                input {
-                    grid-area: 1/1/1/1;
-
-                    margin-bottom: -5px;
-                }
-
-                button {
-                    grid-area: 1/2/1/2;
-                    margin-bottom: 0;
-                    margin-left: 16px;
-                    width: 12rem;
-                }
-
-                .errormsg {
-                    grid-area: 2/1/2/1;
-                    padding-bottom: 0;
-                }
-
-                .validmsg{
-                    grid-area: 2/1/2/1;
-                    padding-bottom: 0;
-                }
-
-
-            }
-        }
-
-    }
-
 }
 
 .wrapper {
-    max-width: 26rem;
+    max-width: 20rem;
 }
 
 .top-content {
@@ -111,7 +60,7 @@ body {
 
     h1 {
         font-weight: 400;
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-align: center;
         color: rgba(0, 0, 0, 0.459);
         margin-bottom: 24px;
@@ -140,7 +89,7 @@ body {
             border-radius: 24px;
             margin-bottom: 10px;
             padding: 16px;
-            width: 22rem;
+            width: 100%;
         }
 
         //Dynamic HTML text with JavaScript
@@ -155,6 +104,7 @@ body {
             font-size: 0.75rem;
             padding-bottom: 10px;
         }
+        //================================
 
         button {
             background-color: hsl(223, 87%, 63%);
@@ -162,7 +112,7 @@ body {
             font-size: 1rem;
             border: none;
             border-radius: 24px;
-            width: 22rem;
+            width: 100%;
             margin-bottom: 32px;
             padding: 16px;
             box-shadow: 2px 2px 4px hsla(210, 52%, 59%, 0.8)
@@ -172,10 +122,6 @@ body {
         button:hover {
             cursor: pointer;
             background-color: hsl(223, 100%, 75%);
-
-            transform: scale(1.1);
-            animation-name: hoverZoom;
-            animation-duration: 0.2s;
 
         }
 
@@ -204,4 +150,47 @@ footer {
     .attribution a {
         color: hsl(228, 31%, 50%);
     }
+}
+
+//media query for Desktop view
+@media (min-width: 37.5rem) {
+    .wrapper {
+        max-width: 42rem;
+    }
+
+    .input-content {
+        margin-bottom: 64px;
+
+        form {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            column-gap: 2rem;
+
+            input {
+                grid-area: 1/1/1/3;
+                margin-bottom: -5px;
+            }
+
+            button {
+                grid-area: 1/3/1/3;
+                margin-left: 10px;
+                margin-bottom: 0;
+            }
+
+            .errormsg {
+                grid-area: 2/1/2/1;
+                column-gap: 0;
+                padding-bottom: 0;
+            }
+
+            .validmsg{
+                grid-area: 2/1/2/1;
+                padding-bottom: 0;
+            }
+
+
+        }
+    }
+
 }
