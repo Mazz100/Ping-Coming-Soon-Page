@@ -90,13 +90,12 @@ body {
             }
         }
 
-
     }
 
 }
 
 .wrapper {
-    max-width: 34rem;
+    max-width: 30rem;
 }
 
 .top-content {
@@ -141,37 +140,29 @@ body {
             border-radius: 24px;
             margin-bottom: 10px;
             padding: 16px;
-            width: 24rem;
+            width: 22rem;
         }
-
-        .redBox {
-            border: 1px solid hsl(354, 100%, 66%);
-        }
-
 
         //Dynamic HTML text with JavaScript
         .errormsg {
             color: red;
             font-size: 0.75rem;
-            padding-left: 16px;
             padding-bottom: 8px;
         }
 
         .validmsg{
             color: green;
             font-size: 0.75rem;
-            padding-left: 16px;
             padding-bottom: 8px;
         }
 
         button {
-
             background-color: hsl(223, 87%, 63%);
             color: white;
             font-size: 1rem;
             border: none;
             border-radius: 24px;
-            width: 24rem;
+            width: 22rem;
             margin-bottom: 32px;
             padding: 16px;
             box-shadow: 2px 2px 4px hsla(210, 52%, 59%, 0.8)
@@ -190,16 +181,10 @@ body {
 
     }
 
-
-
-
-
 }
 
 footer {
     text-align: center;
-
-
 
     .social-logos {
         @include Flex(row);

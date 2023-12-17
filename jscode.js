@@ -1,7 +1,9 @@
 // Storing DOM in const
 const form = document.getElementById('emailForm');
 const email = document.getElementById('email');
+const inputBorder = document.querySelector('input');
 const errormsg = email.nextElementSibling;
+const textmsg = errormsg.nextElementSibling;
 
 const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
@@ -19,11 +21,13 @@ email.addEventListener('input', () => {
     const isValid = email.value.length === 0 || emailRegex.test(email.value);
     if (isValid) {
         email.className = "valid";
-        errormsg.textContent = "";
+        errormsg.textContent = '';
+        inputBorder.style.borderColor = ' hsl(223, 100%, 88%)';
     }
     else {
+        inputBorder.style.borderColor = ' hsl(354, 100%, 66%)';
         errormsg.textContent = 'Please provide a valid email address';
-        errormsg.style.color = 'red';
+        textmsg.textContent = '';
     }
 
 
@@ -36,14 +40,14 @@ form.addEventListener('submit', (e) => {
     const isValid = email.value === 0 || emailRegex.test(email.value);
 
     if (!isValid) {
+        inputBorder.style.borderColor = ' hsl(354, 100%, 66%)';
         errormsg.textContent = 'Please provide a valid email address';
-        
-
     }
     else {
-        errormsg.textContent = 'An email has been sent to you, thanks for submitting';
-        errormsg.style.color = 'green';
-        
+        inputBorder.style.borderColor = ' hsl(223, 100%, 88%)';
+        errormsg.textContent = '';
+        textmsg.textContent = 'An email has been sent to you, thanks for submitting';
+
     }
 });
 
